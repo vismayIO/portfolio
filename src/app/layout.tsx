@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
+import { Header } from "@/components/layout/header";
 import "./globals.css";
 
 const fontSans = Fira_Code({
@@ -18,8 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${fontSans.variable} antialiased`}>{children}</body>
+    <html lang="en" className="dark">
+      <body className={`${fontSans.variable} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
