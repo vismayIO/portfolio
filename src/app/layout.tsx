@@ -5,19 +5,6 @@ import "./globals.css";
 const fontSans = Fira_Code({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const fontSerif = Fira_Code({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const fontMono = Fira_Code({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -32,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${fontSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
